@@ -25,7 +25,7 @@ app.use(express.json()); //permite trabajajar con objetos json
 //app.use(bodyParser.json());
 
 //routes
-app.use('/tasks', tasksRoutes);
+app.use('/api/tasks', tasksRoutes);
 
 //static files
 app.use(express.static(path.join(__dirname, 'public')));

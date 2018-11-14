@@ -8,6 +8,12 @@ router.get('/', async (req, res) => {
     console.log(tasks);
 });
 
+//BUsco un reqgistro por su id
+router.get('/:id', async (req, res) => {
+    const task = await Task.findById(req.params.id);
+    res.json(task);
+});
+
 router.post('/', async (req, res) => {
     const task =  new Task (req.body);
     await task.save();
